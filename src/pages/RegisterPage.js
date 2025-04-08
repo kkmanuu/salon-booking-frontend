@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { Container, Form, Button, Alert, Card } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useAuth } from "../context/AuthContext";
+import { Container, Form, Button, Alert, Card } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-    role: 'customer',
-    name: '',
-    phone: ''
+    username: "",
+    password: "",
+    role: "customer",
+    name: "",
+    phone: "",
   });
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const { register } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     const success = await register(
       formData.username,
       formData.password,
@@ -33,12 +33,12 @@ const RegisterPage = () => {
       formData.phone
     );
     if (!success) {
-      setError('Registration failed. Please try again.');
+      setError("Registration failed. Please try again.");
     }
   };
 
   return (
-    <Container className="mt-5" style={{ maxWidth: '600px' }}>
+    <Container className="mt-5" style={{ maxWidth: "600px" }}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Register</h2>
