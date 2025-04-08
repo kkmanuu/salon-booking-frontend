@@ -42,7 +42,7 @@ const BookingForm = () => {
       return;
     }
   
-    // ✅ Ensure correct names are selected before setting booking data
+    // ✅ booking data
     const selectedServiceData = services.find(s => s.id.toString() === selectedService);
     const selectedStaffData = staff.find(s => s.id.toString() === selectedStaff);
   
