@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaCut, FaPalette, FaHandSparkles } from "react-icons/fa"; // Fixed icons
+import { FaCut, FaPalette, FaHandSparkles } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -36,7 +36,7 @@ const Home = () => {
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow text-center">
               <div className="card-body">
-                <FaCut size={50} className="text-primary mb-3" /> {/* Fixed Hair Styling Icon */}
+                <FaCut size={50} className="text-primary mb-3" /> 
                 <h5 className="card-title">Hair Styling</h5>
                 <p className="card-text">Professional hair cutting and styling services.</p>
               </div>
@@ -45,7 +45,7 @@ const Home = () => {
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow text-center">
               <div className="card-body">
-                <FaPalette size={50} className="text-danger mb-3" /> {/* Hair Coloring Icon */}
+                <FaPalette size={50} className="text-danger mb-3" />
                 <h5 className="card-title">Hair Coloring</h5>
                 <p className="card-text">Expert hair coloring and treatment services.</p>
               </div>
@@ -54,7 +54,7 @@ const Home = () => {
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow text-center">
               <div className="card-body">
-                <FaHandSparkles size={50} className="text-success mb-3" /> {/* Nail Care Icon */}
+                <FaHandSparkles size={50} className="text-success mb-3" /> 
                 <h5 className="card-title">Nail Care</h5>
                 <p className="card-text">Manicure, pedicure, and nail art services.</p>
               </div>
